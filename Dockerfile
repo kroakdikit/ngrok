@@ -1,9 +1,9 @@
 # image Portainer
 FROM portainer/portainer-ce:latest
 
-# port 9443
+# Expose port 9443
 EXPOSE 9443
 
-# Portainer
-ENTRYPOINT ["/portainer"]
-CMD ["--no-analytics"]
+# Run
+CMD ["portainer", "--host", "0.0.0.0"]
+
